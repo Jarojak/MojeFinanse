@@ -94,3 +94,22 @@ ol > li > a:active {
 p {
   line-height: 200%;
 }
+
+@keyframes opacityChangeOnPageLoad {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.container > .appear {
+  opacity: 0;
+}
+
+.appear {
+  animation: 0.8s ease-in 1.5s 1 opacityChangeOnPageLoad;
+  /* animation 100% remain after animation finish */
+  animation-fill-mode: forwards;
+}
