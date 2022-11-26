@@ -29,7 +29,9 @@
           <!-- JS links disabled will be changed depends on login user state -->
           <ul class="navbar-nav flex-grow-1 mt-xl-0 mt-1">
             <li class="nav-item m-1 m-xl-0">
-              <a class="nav-link active border rounded" href="#">Strona Główna</a>
+              <a class="nav-link active border rounded" href="#"
+                >Strona Główna</a
+              >
             </li>
             <li class="nav-item m-1 m-xl-0">
               <a class="nav-link border rounded" href="#">Dodaj Przychód</a>
@@ -54,13 +56,15 @@
             </span>
             <a
               class="btn btn-outline-success m-1 m-xl-0 d-block d-xl-inline-block mb-2"
-              href="#"
+              data-bs-toggle="modal"
+              href="#exampleModalToggle"
               role="button"
               >Logowanie</a
             >
             <a
               class="btn btn-outline-primary m-1 m-xl-0 d-block d-xl-inline-block"
-              href="#"
+              data-bs-toggle="modal"
+              href="#exampleModalToggle2"
               role="button"
               >Rejestracja</a
             >
@@ -85,6 +89,142 @@
         >
       </div>
     </main>
+
+    <!-- MODAL 1 - USER LOGIN -->
+    <div class="modal fade" id="exampleModalToggle" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header p-5 pb-4 border-bottom-0">
+            <h1 class="fw-bold mb-0 fs-2">Zaloguj się!</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body px-5">
+            <form class="">
+              <div class="form-floating mb-3">
+                <input
+                  type="email"
+                  class="form-control rounded-3"
+                  id="floatingInput"
+                  placeholder="Adres email"
+                />
+                <label for="floatingInput">Adres email</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="password"
+                  class="form-control rounded-3"
+                  id="floatingPassword"
+                  placeholder="Hasło"
+                />
+                <label for="floatingPassword">Hasło</label>
+              </div>
+              <button
+                class="w-100 mb-2 btn btn-lg rounded-3 btn-success"
+                type="submit"
+              >
+                Logowanie
+              </button>
+              <small class="text-muted"
+                >Jeżeli, nie posiadasz konta załóż nowe poprzez
+                rejestrację</small
+              >
+              <hr class="my-3" />
+            </form>
+            <div class="form-floating mb-3">
+              <button
+                class="w-100 mb-2 btn btn-lg rounded-3 btn-primary"
+                data-bs-target="#exampleModalToggle2"
+                data-bs-toggle="modal"
+                data-bs-dismiss="modal"
+              >
+                Rejestracja
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- MODAL 2 - NEW USER REGISTRATION -->
+    <div class="modal fade" id="exampleModalToggle2" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header p-5 pb-4 border-bottom-0">
+            <h1 class="fw-bold mb-0 fs-2">Zarejestruj się!</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body px-5">
+            <form class="">
+              <div class="form-floating mb-3">
+                <input
+                  type="text"
+                  class="form-control rounded-3"
+                  id="floatingInput"
+                  placeholder="Imię"
+                />
+                <label for="floatingInput">Imię</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="email"
+                  class="form-control rounded-3"
+                  id="floatingEmail"
+                  placeholder="Adres email"
+                />
+                <label for="floatingEmail">Adres email</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="password"
+                  class="form-control rounded-3"
+                  id="floatingPassword"
+                  placeholder="Hasło"
+                />
+                <label for="floatingPassword">Hasło</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="password"
+                  class="form-control rounded-3"
+                  id="floatingPassword2"
+                  placeholder="Powtórz Hasło"
+                />
+                <label for="floatingPassword2">Powtórz hasło</label>
+              </div>
+              <button
+                class="w-100 mb-2 btn btn-lg rounded-3 btn-primary"
+                type="submit"
+              >
+                Rejestracja
+              </button>
+              <small class="text-muted"
+                >Jeżeli posiadasz już konto, zaloguj się</small
+              >
+              <hr class="my-3" />
+            </form>
+            <div class="form-floating mb-3">
+              <button
+                class="w-100 mb-2 btn btn-lg rounded-3 btn-success"
+                data-bs-target="#exampleModalToggle"
+                data-bs-toggle="modal"
+                data-bs-dismiss="modal"
+              >
+                Logowanie
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
   </body>
