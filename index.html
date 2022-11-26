@@ -90,70 +90,137 @@
       </div>
     </main>
 
-    <div
-      class="modal fade"
-      id="exampleModalToggle"
-      aria-hidden="true"
-      aria-labelledby="exampleModalToggleLabel"
-      tabindex="-1"
-    >
+    <!-- MODAL 1 - USER LOGIN -->
+    <div class="modal fade" id="exampleModalToggle" tabindex="-1">
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalToggleLabel">Modal 1</h5>
+          <div class="modal-header p-5 pb-4 border-bottom-0">
+            <h1 class="fw-bold mb-0 fs-2">Zaloguj się!</h1>
             <button
               type="button"
               class="btn-close"
               data-bs-dismiss="modal"
-              aria-label="Close"
             ></button>
           </div>
-          <div class="modal-body">
-            Show a second modal and hide this one with the button below.
-          </div>
-          <div class="modal-footer">
-            <button
-              class="btn btn-primary"
-              data-bs-target="#exampleModalToggle2"
-              data-bs-toggle="modal"
-              data-bs-dismiss="modal"
-            >
-              Open second modal
-            </button>
+          <div class="modal-body px-5">
+            <form class="">
+              <div class="form-floating mb-3">
+                <input
+                  type="email"
+                  class="form-control rounded-3"
+                  id="floatingInput"
+                  placeholder="Adres email"
+                />
+                <label for="floatingInput">Adres email</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="password"
+                  class="form-control rounded-3"
+                  id="floatingPassword"
+                  placeholder="Hasło"
+                />
+                <label for="floatingPassword">Hasło</label>
+              </div>
+              <button
+                class="w-100 mb-2 btn btn-lg rounded-3 btn-success"
+                type="submit"
+              >
+                Logowanie
+              </button>
+              <small class="text-muted"
+                >Jeżeli, nie posiadasz konta załóż nowe poprzez
+                rejestrację</small
+              >
+              <hr class="my-3" />
+            </form>
+            <div class="form-floating mb-3">
+              <button
+                class="w-100 mb-2 btn btn-lg rounded-3 btn-primary"
+                data-bs-target="#exampleModalToggle2"
+                data-bs-toggle="modal"
+                data-bs-dismiss="modal"
+              >
+                Rejestracja
+              </button>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <div
-      class="modal fade"
-      id="exampleModalToggle2"
-      aria-hidden="true"
-      aria-labelledby="exampleModalToggleLabel2"
-      tabindex="-1"
-    >
+
+
+    <!-- MODAL 2 - NEW USER REGISTRATION -->
+    <div class="modal fade" id="exampleModalToggle2" tabindex="-1">
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5>
+          <div class="modal-header p-5 pb-4 border-bottom-0">
+            <h1 class="fw-bold mb-0 fs-2">Zarejestruj się!</h1>
             <button
               type="button"
               class="btn-close"
               data-bs-dismiss="modal"
-              aria-label="Close"
             ></button>
           </div>
-          <div class="modal-body">
-            Hide this modal and show the first with the button below.
-          </div>
-          <div class="modal-footer">
-            <button
-              class="btn btn-primary"
-              data-bs-target="#exampleModalToggle"
-              data-bs-toggle="modal"
-              data-bs-dismiss="modal"
-            >
-              Back to first
-            </button>
+          <div class="modal-body px-5">
+            <form class="">
+              <div class="form-floating mb-3">
+                <input
+                  type="text"
+                  class="form-control rounded-3"
+                  id="floatingInput"
+                  placeholder="Imię"
+                />
+                <label for="floatingInput">Imię</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="email"
+                  class="form-control rounded-3"
+                  id="floatingEmail"
+                  placeholder="Adres email"
+                />
+                <label for="floatingEmail">Adres email</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="password"
+                  class="form-control rounded-3"
+                  id="floatingPassword"
+                  placeholder="Hasło"
+                />
+                <label for="floatingPassword">Hasło</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="password"
+                  class="form-control rounded-3"
+                  id="floatingPassword2"
+                  placeholder="Powtórz Hasło"
+                />
+                <label for="floatingPassword2">Powtórz hasło</label>
+              </div>
+              <button
+                class="w-100 mb-2 btn btn-lg rounded-3 btn-primary"
+                type="submit"
+              >
+                Rejestracja
+              </button>
+              <small class="text-muted"
+                >Jeżeli posiadasz już konto, zaloguj się</small
+              >
+              <hr class="my-3" />
+            </form>
+            <div class="form-floating mb-3">
+              <button
+                class="w-100 mb-2 btn btn-lg rounded-3 btn-success"
+                data-bs-target="#exampleModalToggle"
+                data-bs-toggle="modal"
+                data-bs-dismiss="modal"
+              >
+                Logowanie
+              </button>
+            </div>
           </div>
         </div>
       </div>
