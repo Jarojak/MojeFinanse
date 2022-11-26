@@ -64,3 +64,52 @@ body {
   border-color: #71a00d;
   background-color: #71a00d;
 }
+
+ol > li {
+  font-size: 20px;
+  font-weight: 500;
+  min-height: 35px;
+}
+
+ol > li > a:link {
+  color: black;
+  text-decoration: none;
+}
+
+ol > li > a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+ol > li > a:hover {
+  color: #93c01f;
+  text-decoration: underline;
+}
+
+ol > li > a:active {
+  color: black;
+  text-decoration: none;
+}
+
+p {
+  line-height: 200%;
+}
+
+@keyframes opacityChangeOnPageLoad {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.container > .appear {
+  opacity: 0;
+}
+
+.appear {
+  animation: 0.8s ease-in 1.5s 1 opacityChangeOnPageLoad;
+  /* animation 100% remain after animation finish */
+  animation-fill-mode: forwards;
+}
