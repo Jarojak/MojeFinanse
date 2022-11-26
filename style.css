@@ -13,3 +13,8 @@ body {
   width: 25px;
   height: 25px;
 }
+
+.logged-in-as {
+  color: #93c01f;
+  text-align: center;
+}
