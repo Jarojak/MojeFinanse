@@ -18,3 +18,19 @@ body {
   color: #93c01f;
   text-align: center;
 }
+
+.btn.btn-outline-success {
+  color: #93c01f;
+  border-color: #93c01f;
+}
+.btn.btn-outline-success:hover {
+  color: white;
+  border-color: #93c01f;
+  background-color: #93c01f;
+}
+.btn.btn-outline-success.active,
+.btn.btn-outline-success:active {
+  color: white;
+  border-color: #93c01f;
+  background-color: #93c01f;
+}
