@@ -47,3 +47,20 @@ body {
     border: hidden !important;
   }
 }
+
+.btn.btn-success {
+  color: white;
+  background-color: #93c01f;
+  border-color: #93c01f;
+}
+.btn.btn-success:hover {
+  color: white;
+  border-color: #82b00e;
+  background-color: #82b00e;
+}
+.btn.btn-success.active,
+.btn.btn-success:active {
+  color: white;
+  border-color: #71a00d;
+  background-color: #71a00d;
+}
