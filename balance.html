@@ -129,16 +129,19 @@
               <a class="nav-link border rounded" href="#">Dodaj Wydatek</a>
             </li>
             <li class="nav-item m-1 m-xl-0 dropdown">
-              <a class="nav-link border rounded active dropdown-toggle" href="#" data-bs-toggle="dropdown"
+              <a
+                class="nav-link border rounded active dropdown-toggle"
+                href="#"
+                data-bs-toggle="dropdown"
                 >Przeglądaj Bilans</a
               >
               <ul class="dropdown-menu dropdown-menu-dark">
                 <li><a class="dropdown-item" href="#">Ostatnie 30 dni</a></li>
                 <li><a class="dropdown-item" href="#">Bieżący miesiąc</a></li>
                 <li><a class="dropdown-item" href="#">Poprzedni miesiąc</a></li>
-                <li><hr class="dropdown-divider"></li>
+                <li><hr class="dropdown-divider" /></li>
                 <li>
-                  <a class="dropdown-item" href="#">Wybrany zakres dat</a>
+                  <a class="dropdown-item" href="#modalDateSelector" data-bs-toggle="modal">Wybrany zakres dat</a>
                 </li>
               </ul>
             </li>
@@ -242,6 +245,52 @@
         </div>
       </div>
     </main>
+
+    <!-- MODAL DATE SELECTION -->
+    <div class="modal fade" id="modalDateSelector" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header p-5 pb-4 border-bottom-0">
+            <h1 class="fw-bold mb-0 fs-2">Wybierz zakres dat</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+
+          <div class="modal-body p-5 pt-0">
+            <form class="">
+              <div class="form-floating mb-3">
+                <input
+                  type="date"
+                  class="form-control rounded-3"
+                  id="floatingDateFrom"
+                  placeholder="Data od"
+                />
+                <label for="floatingDateFrom">Data od</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="date"
+                  class="form-control rounded-3"
+                  id="floatingDateTo"
+                  placeholder="Data do"
+                />
+                <label for="floatingDateTo">Data do</label>
+              </div>
+              <button
+                class="w-100 mb-2 btn btn-lg rounded-3 btn-primary"
+                type="submit"
+              >
+                Zatwierdź
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script src="./assets/dist/js/bootstrap.bundle.min.js"></script>
   </body>
