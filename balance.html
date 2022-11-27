@@ -8,6 +8,97 @@
 
     <link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="style.css" rel="stylesheet" />
+
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
+    <script type="text/javascript">
+      google.charts.load("current", { packages: ["corechart"] });
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ["Przychody", "Wartość"],
+          ["Wynagrodzenie", 11],
+          ["Odsetki bankowe", 2],
+          ["Sprzedaż na allegro", 2],
+          ["Inne", 2],
+        ]);
+
+        var options = {
+          title: "Przychody",
+          titleTextStyle: {
+            // color: <string>,    // any HTML string color ('red', '#cc00cc')
+            // fontName: <string>, // i.e. 'Times New Roman'
+            fontSize: 18, // 12, 18 whatever you want (don't specify px)
+            // bold: <boolean>,    // true or false
+            // italic: <boolean>   // true of false
+          },
+          pieHole: 0.4,
+          legend: "none",
+          backgroundColor: "transparent",
+          width: 400,
+          height: 400,
+        };
+
+        var chart = new google.visualization.PieChart(
+          document.getElementById("incomesdonutchart")
+        );
+        chart.draw(data, options);
+      }
+    </script>
+
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
+    <script type="text/javascript">
+      google.charts.load("current", { packages: ["corechart"] });
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ["Wydatki", "Wartość"],
+          ["Jedzenie", 11],
+          ["Mieszkanie", 2],
+          ["Transport", 2],
+          ["Telekomunikacja", 2],
+          ["Opieka zdrowotna", 2],
+          ["Ubrania", 2],
+          ["Higiena", 2],
+          ["Dzieci", 2],
+          ["Rozrywka", 2],
+          ["Wycieczka", 2],
+          ["Trening", 2],
+          ["Książki", 2],
+          ["Oszczędności", 2],
+          ["Na złotą jesień, czyli emeryturę", 2],
+          ["Spłata długów", 2],
+          ["Darowizna", 2],
+          ["Inne wydatki", 2],
+        ]);
+
+        var options = {
+          title: "Wydatki",
+          titleTextStyle: {
+            // color: <string>,    // any HTML string color ('red', '#cc00cc')
+            // fontName: <string>, // i.e. 'Times New Roman'
+            fontSize: 18, // 12, 18 whatever you want (don't specify px)
+            // bold: <boolean>,    // true or false
+            // italic: <boolean>   // true of false
+          },
+          pieHole: 0.4,
+          legend: "none",
+          backgroundColor: "transparent",
+          width: 400,
+          height: 400,
+        };
+
+        var chart = new google.visualization.PieChart(
+          document.getElementById("outcomesdonutchart")
+        );
+        chart.draw(data, options);
+      }
+    </script>
   </head>
   <body>
     <nav class="navbar navbar-expand-xl navbar-dark fixed-top bg-dark">
@@ -32,15 +123,15 @@
               <a class="nav-link border rounded" href="#">Strona Główna</a>
             </li>
             <li class="nav-item m-1 m-xl-0">
-              <a class="nav-link border rounded" href="#"
-                >Dodaj Przychód</a
-              >
+              <a class="nav-link border rounded" href="#">Dodaj Przychód</a>
             </li>
             <li class="nav-item m-1 m-xl-0">
               <a class="nav-link border rounded" href="#">Dodaj Wydatek</a>
             </li>
             <li class="nav-item m-1 m-xl-0">
-              <a class="nav-link border rounded active" href="#">Przeglądaj Bilans</a>
+              <a class="nav-link border rounded active" href="#"
+                >Przeglądaj Bilans</a
+              >
             </li>
             <li class="nav-item m-1 m-xl-0">
               <a class="nav-link border rounded" href="#">Ustawienia</a>
@@ -61,9 +152,8 @@
 
     <main class="container">
       <div class="bg-light px-5 py-4 rounded">
-        <!-- <h1 class="h3 mb-4 center-block">Wprowadź dane:</h1> -->
-
-        
+        <div id="incomesdonutchart"></div>
+        <div id="outcomesdonutchart"></div>
       </div>
     </main>
 
