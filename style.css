@@ -1,5 +1,5 @@
 body {
-  min-height: 75rem;
+  /* min-height: 75rem; */
   padding-top: 4.5rem;
 
   background: url("img/tlo.jpg") no-repeat center center fixed;
@@ -112,4 +112,15 @@ p {
   animation: 0.8s ease-in 1.5s 1 opacityChangeOnPageLoad;
   /* animation 100% remain after animation finish */
   animation-fill-mode: forwards;
+}
+
+.input-width {
+  min-width: 300px;
+  max-width: 300px;
+}
+
+.center-block {
+  display: table;  /* Instead of display:block */
+  margin-left: auto;
+  margin-right: auto;
 }
