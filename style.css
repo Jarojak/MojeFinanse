@@ -132,3 +132,7 @@ p {
 .table-responsive {
   width: 100%;
 }
+
+.hr-edit {
+  margin-bottom: 8px;
+}
