@@ -147,7 +147,9 @@
             <div class="col-12 btn btn-warning text-white py-2 mb-1 fw-bold">
               <i class="icon-tools"></i>dane użytkownika
             </div>
-            <div class="col-12 btn btn-danger py-2 fw-bold">
+            <div class="col-12 btn btn-danger py-2 fw-bold"
+              href="#modalRemAccount"
+              data-bs-toggle="modal">
               <i class="icon-cancel-squared"></i>usuń konto
             </div>
           </div>
@@ -532,6 +534,34 @@
                 type="submit"
               >
                 Usuń
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- remove category name payment -->
+    <div class="modal fade" id="modalRemAccount" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header p-5 pb-4 border-bottom-0">
+            <h1 class="fw-bold mb-0 fs-2 w-100">Usuwanie Konta</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+
+          <div class="modal-body p-5 pt-0">
+            <form class="">
+              <div class="w-100 my-5"></div>
+              <button
+                class="w-100 mb-2 mt-5 btn btn-lg rounded-3 btn-danger"
+                type="submit"
+              >
+                Usuń Konto
               </button>
             </form>
           </div>
